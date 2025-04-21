@@ -96,3 +96,44 @@ void change_pin() {
         }
     }
 }
+int main() {
+    int choice;
+    char input[10];
+
+    while (1) {
+        printf("\n=== ATM Menu ===\n");
+        printf("1. Check Balance\n");
+        printf("2. Deposit Money\n");
+        printf("3. Withdraw Money\n");
+        printf("4. Change PIN\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+
+        get_input("", input, sizeof(input));
+        choice = atoi(input);
+
+        switch (choice) {
+            case 1:
+                check_balance();
+                break;
+            case 2:
+                deposit_money();
+                break;
+            case 3:
+                withdraw_money();
+                break;
+            case 4:
+                change_pin();
+                break;
+            case 5:
+                printf("Thank you for using the ATM.\n");
+                exit(0);
+            default:
+                printf("Invalid choice. Please enter a number from 1 to 5.\n");
+        }
+    }
+    return 0;
+}
+
+
+
