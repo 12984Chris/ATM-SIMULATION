@@ -77,3 +77,22 @@ void withdraw_money() {ss
         clear_buffer();
     }
 }
+void change_pin() {
+    if (check_pin()) {
+        char new_pin[10], confirm_pin[10];
+        get_input("Enter new 4-digit PIN: ", new_pin, sizeof(new_pin));
+        get_input("Confirm new PIN: ", confirm_pin, sizeof(confirm_pin));
+
+        if (strlen(new_pin) != MAX_PIN_LENGTH || strlen(confirm_pin) != MAX_PIN_LENGTH) {
+            printf("PIN must be exactly 4 digits.\n");
+            return;
+        }
+
+        if (strcmp(new_pin, confirm_pin) == 0) {
+            strcpy(pin, new_pin);
+            printf("PIN changed successfully.\n");
+        } else {
+            printf("PINs do not match.\n");
+        }
+    }
+}
