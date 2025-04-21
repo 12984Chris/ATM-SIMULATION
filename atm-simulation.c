@@ -59,3 +59,21 @@ void deposit_money() {
         clear_buffer();
     }
 }
+void withdraw_money() {ss
+    if (check_point()) {
+        int amount;
+        printf("Enter amount to withdraw: ");
+        if (scanf("%d", &amount) != 1 || amount <= 0) {
+            printf("Invalid input. Withdrawal amount must be a positive number. \n");
+            clear_buffer();
+            return;
+        }
+        if (amount > balance) {
+            printf("Insufficient balance.\n");
+        }else{
+            balance -= amount;
+            printf("$%d withdrawn successfully.\n", amount);
+        }
+        clear_buffer();
+    }
+}
