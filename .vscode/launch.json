@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+<<<<<<< Updated upstream
+      "cwd": "c:/Users/ianki/Documents/GitHub/ATM-SIMULATION",
+      "program": "c:/Users/ianki/Documents/GitHub/ATM-SIMULATION/build/Debug/outDebug",
+=======
+      "cwd": "c:/Users/CHRIS/OneDrive/Documents/GitHub/ATM-SIMULATION",
+      "program": "c:/Users/CHRIS/OneDrive/Documents/GitHub/ATM-SIMULATION/build/Debug/outDebug",
+>>>>>>> Stashed changes
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
